@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h1 {
+    color: #728091;
+    font-weight: 500;
+}
+h2 {
+    color: white;
+    font-weight: 300;
+}
+
+.logo{
+    color: white;
+    font-size: 32px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #728091;
+    height: 85px;
+    padding: 15px 100px;
+}
+.topnav a {
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+}
+
+.search form {
+    margin-top: 10px;
+    float: left;
+    width: auto;
+    position: absolute;
+    margin-left: 30%;
+}
+.search input {
+    width: 300px;
+    height: 40px;
+    padding: 5px 25px;
+    border-radius: 42px;
+    border: 2px solid #728091;
+    background: white;
+    outline: none;
+}
+.search button {
+    width: 25px;
+    height: 25px;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 12px;
+    right: 25px;
+}
+.search button:before{
+    content: "\f002";
+    font-size: 25px;
+    font-family: FontAwesome;
+    color: #728091;
+}
+
+.button {
+    width: 60px;
+    height: 40px;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 75%;
+    padding: 5px 25px;
+    background-color: white;
+    color: #728091;
+    font-size: 20px;
+    border: 2px solid #728091;
+    border-radius: 50px;
+}
+
+.genres {
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+.content{
+    width: auto;
+    height: auto;
+    padding: 50px 0px;
+}
+
+.book{
+    width: 170px;
+    height: 250px;
+    margin-bottom: 100px;
+    margin-left: 100px; 
+    background-color: #eeeeee;
+    display: inline-block;
+}
+
+.title{
+    margin-top: 75px;
+    height: 50px;
+    opacity: 75%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #728091;
+}
