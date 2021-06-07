@@ -5,11 +5,37 @@ body {
 
 h1 {
     color: #728091;
-    font-weight: 500;
+    font-weight: 700;
 }
 h2 {
     color: white;
+    font-weight: 500;
+}
+h3 {
+    color: white;
     font-weight: 300;
+}
+
+a{
+    text-decoration: none;
+}
+
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    width: 100%;
+}
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
 }
 
 .logo{
@@ -61,7 +87,7 @@ h2 {
     color: #728091;
 }
 
-.button {
+.buttonnav {
     width: 60px;
     height: 40px;
     float: right;
@@ -107,4 +133,144 @@ h2 {
     align-items: center;
     justify-content: center;
     background-color: #728091;
+}
+
+.center {
+    margin: 0 auto; 
+    width:250px;
+    text-align: center;
+}
+
+button {
+    align-items: center;
+    margin-top: 35px;
+    justify-content: center;
+    padding: 11px 23px;
+    background-color: white;
+    color: #728091;
+    font-size: 20px;
+    border: 2px solid #728091;
+    border-radius: 50px;
+}
+
+.button {
+    align-items: center;
+    margin-top: 35px;
+    justify-content: center;
+    padding: 11px 23px;
+    background-color: white;
+    color: #728091;
+    font-size: 20px;
+    border: 2px solid #728091;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+input {
+    margin-top: 5px;
+    padding: 15px 32px;
+    border-radius: 100px;
+    border: solid 2px #728091;
+}
+
+.block {
+    background-color: #728091;
+    margin-top: 150px;
+    margin-left: auto; 
+    margin-right: auto; 
+    width:250px;
+    padding: 50px 75px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.left-block {
+    float: left;
+    text-align: center;
+    background-color: #f5f5f5;
+    width:300px;
+    height: 1000px;
+}
+
+.rating-mini {
+    display: inline-block;
+    font-size: 0;
+}
+.rating-mini span {
+    font-size: 20px;
+    line-height: 1;
+    color: lightgrey;
+}
+.rating-mini > span:before {
+    content: '★';
+}
+.rating-mini > span.active {
+    color: gold;
+}
+
+.rating-area {
+    overflow: hidden;
+    width: 265px;
+    margin-left: -50px ;
+}
+.rating-area:not(:checked) > input {
+    display: none;
+}
+.rating-area:not(:checked) > label {
+    float: right;
+    cursor: pointer;
+    font-size: 32px;
+    line-height: 32px;
+    color: lightgrey;
+}
+.rating-area:not(:checked) > label:before {
+    content: '★';
+}
+.rating-area > input:checked ~ label {
+    color: gold;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+    color: gold;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+    color: gold;
+}
+.rate-area > label:active {
+    position: relative;
+}
+
+.select:not(.select--multiple)::after
+
+select{
+
+}
+
+select[multiple] {
+    padding-right: 0;
+}
+
+select[multiple] option {
+    white-space: normal;
+}
+
+select[multiple] {
+    height: 6rem;
+}
+
+.bookcover {
+    margin-top: 50px;
+    margin-left: 25px;
+    background-color: white;
+    width:250px;
+    height: 400px;
+}
+
+.description {
+    padding: 50px 50px;
+    margin-left: 350px;
 }
