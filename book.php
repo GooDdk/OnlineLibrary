@@ -12,10 +12,43 @@
 </head>
 <body>
 
+<?php
+session_start();
+
+if (isset($_SESSION["id"]))
+{
+?>
 	<nav class="topnav">
-  		<a href="./index.php" class="logo"><img src="img/logo.png" alt="logo" />   OnlineLibrary</a>
-  		<a href="./login.php" class="buttonnav">Log in</a>
+  		<a href="index.php" class="logo"><img src="img/logo.png" alt="logo" />   OnlineLibrary</a>
+  		<div class="search">
+			<form>
+  				<input type="text" placeholder="">
+  				<button type="submit"></button>
+			</form>
+		</div>
+  		<a href="profile.php" class="buttonnav">Profile</a>
 	</nav>
+
+<?php
+}
+else
+{
+?>
+
+	<nav class="topnav">
+  		<a href="index.php" class="logo"><img src="img/logo.png" alt="logo" />   OnlineLibrary</a>
+  		<div class="search">
+			<form>
+  				<input type="text" placeholder="">
+  				<button type="submit"></button>
+			</form>
+		</div>
+  		<a href="login.php" class="buttonnav">Log in</a>
+	</nav>
+
+<?php   
+}
+?>
 
 	<div class="left-block">
 		<div class="bookcover">
@@ -33,10 +66,10 @@
 		</div>
 		<br>
 		<button name="submit" type="submit">Want to read</button>
-		<a href="./read.php" class="button" style="color: white; background-color: #728091;;">Read</a>
+		<a href="read.php" class="button" style="color: white; background-color: #728091;">Read</a>
 	</div>
 
-	<div class="description">
+	<div class="right-block">
 		<h1>Publisher description</h1>
 		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, pariatur doloremque, ad rerum recusandae labore ut! Odio, architecto, expedita enim quam ullam ut facere aut rerum, doloribus magnam quisquam cum. Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Recusandae sit ducimus sequi explicabo rerum praesentium qui numquam consequatur sed voluptas, dicta magnam velit laboriosam facere molestiae possimus vel iure, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora veniam officia eaque deserunt asperiores vel sint accusamus sequi pariatur unde aliquid quaerat nemo aliquam, velit. Atque nulla molestiae quaerat eum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores eius nihil facilis quo. Neque mollitia, id expedita voluptate? Tenetur, nostrum ipsam facere a provident quia assumenda culpa. Consectetur explicabo, officia. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus porro, dolorem culpa exercitationem maxime delectus, harum magnam. Suscipit quidem voluptatum consectetur odio voluptatem. Distinctio libero, earum repudiandae, dolorum cum ipsa.</p>
 		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, pariatur doloremque, ad rerum recusandae labore ut! Odio, architecto, expedita enim quam ullam ut facere aut rerum, doloribus magnam quisquam cum. Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Recusandae sit ducimus sequi explicabo rerum praesentium qui numquam consequatur sed voluptas, dicta magnam velit laboriosam facere molestiae possimus vel iure, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora veniam officia eaque deserunt asperiores vel sint accusamus sequi pariatur unde aliquid quaerat nemo aliquam, velit. Atque nulla molestiae quaerat eum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores eius nihil facilis quo. Neque mollitia, id expedita voluptate? Tenetur, nostrum ipsam facere a provident quia assumenda culpa. Consectetur explicabo, officia. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus porro, dolorem culpa exercitationem maxime delectus, harum magnam. Suscipit quidem voluptatum consectetur odio voluptatem. Distinctio libero, earum repudiandae, dolorum cum ipsa.</p>

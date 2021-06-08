@@ -12,55 +12,78 @@
 </head>
 <body>
 
+	<?php
+session_start();
+
+if (isset($_SESSION["id"]))
+{
+?>
 	<nav class="topnav">
-  		<a href="./index.php" class="logo"><img src="img/logo.png" alt="logo" />   OnlineLibrary</a>
+  		<a href="index.php" class="logo"><img src="img/logo.png" alt="logo" />   OnlineLibrary</a>
   		<div class="search">
 			<form>
   				<input type="text" placeholder="">
   				<button type="submit"></button>
 			</form>
 		</div>
-  		<a href="./login.php" class="buttonnav">Log in</a>
+  		<a href="profile.php" class="buttonnav">Profile</a>
 	</nav>
 
-	<div class="left-block">
-		<h1>Rating</h1>
-		<div class="rating-area">
-			<input type="radio" id="star-5" name="rating" value="5">
-			<label for="star-5" title="Оценка «5»"></label>	
-			<input type="radio" id="star-4" name="rating" value="4">
-			<label for="star-4" title="Оценка «4»"></label>    
-			<input type="radio" id="star-3" name="rating" value="3">
-			<label for="star-3" title="Оценка «3»"></label>  
-			<input type="radio" id="star-2" name="rating" value="2">
-			<label for="star-2" title="Оценка «2»"></label>    
-			<input type="radio" id="star-1" name="rating" value="1">
-			<label for="star-1" title="Оценка «1»"></label>
+<?php
+}
+else
+{
+?>
+
+	<nav class="topnav">
+  		<a href="index.php" class="logo"><img src="img/logo.png" alt="logo" />   OnlineLibrary</a>
+  		<div class="search">
+			<form>
+  				<input type="text" placeholder="">
+  				<button type="submit"></button>
+			</form>
 		</div>
-		<h1>Language</h1>
+  		<a href="login.php" class="buttonnav">Log in</a>
+	</nav>
 
-		<div class="select select--multiple">
-  			<select id="multi-select" multiple>
-    			<option value="Option 1">Estonian</option>
-    			<option value="Option 2">Russian</option>
-    			<option value="Option 3">English</option>
-  			</select>
-  			<span class="focus"></span>
+<?php   
+}
+?>
+
+	<form method="POST">
+		<div class="left-block">
+			<h1>Rating</h1>
+			<div class="rating-area">
+				<input type="radio" id="star-5" name="rating" value="5">
+				<label for="star-5" title="Оценка «5»"></label>	
+				<input type="radio" id="star-4" name="rating" value="4">
+				<label for="star-4" title="Оценка «4»"></label>    
+				<input type="radio" id="star-3" name="rating" value="3">
+				<label for="star-3" title="Оценка «3»"></label>  
+				<input type="radio" id="star-2" name="rating" value="2">
+				<label for="star-2" title="Оценка «2»"></label>    
+				<input type="radio" id="star-1" name="rating" value="1">
+				<label for="star-1" title="Оценка «1»"></label>
+			</div>
+			<h1>Language</h1>
+			<div class="select select--multiple">
+  				<select id="multi-select" multiple>
+    				<option value="Option 1">Estonian</option>
+    				<option value="Option 2">Russian</option>
+    				<option value="Option 3">English</option>
+  				</select>
+  				<span class="focus"></span>
+			</div>
+			<button name="submit" type="submit">Apply</button>
 		</div>
+	</form>
 
-		<button name="submit" type="submit">Apply</button>
-	</div>
-
-	<div class="content">
-		<a href="./book.php">
+	<div class="right-block">
+		<a href="book.php">
 			<div class="book">
 			<img alt="" src="">
 		</div>
 		</a>
-		<div class="book">
-			<img alt="" src="">
-		</div>
-		<h2>
 		<div class="book">
 			<img alt="" src="">
 		</div>

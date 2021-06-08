@@ -10,7 +10,7 @@
     </head>
     <body>
         <nav class="topnav">
-            <a href="./index.php" class="logo"><img src="img/logo.png" alt="logo" />   OnlineLibrary</a>
+            <a href="index.php" class="logo"><img src="img/logo.png" alt="logo" />   OnlineLibrary</a>
         </nav>
 
         <?php
@@ -56,7 +56,7 @@
                 <input name="password" placeholder="Password" type="password">
                 <input name="repeat_password" placeholder="Repeat Password" type="password">
                 <button name="submit" type="submit">Sign up</button>
-                <a href="./login.php" class="button">Log in</a>
+                <a href="login.php" class="button">Log in</a>
             </form>
          </div>
 

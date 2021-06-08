@@ -12,7 +12,7 @@
 <body>
 
 	<nav class="topnav">
-  		<a href="./index.php" class="logo"><img src="img/logo.png" alt="logo" />   OnlineLibrary</a>
+  		<a href="index.php" class="logo"><img src="img/logo.png" alt="logo" />   OnlineLibrary</a>
 	</nav>
 
 	<?php
@@ -31,7 +31,7 @@
 			<input name="username" placeholder="Login" type="text">
 			<input name="password" placeholder="Password" type="password">
 			<button name="submit" type="submit">Log in</button>
-			<a href="./register.php" class="button">Register</a>
+			<a href="register.php" class="button">Register</a>
 		</form>
 	</div>
 

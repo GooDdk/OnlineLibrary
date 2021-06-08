@@ -12,16 +12,43 @@
 </head>
 <body>
 
+<?php
+session_start();
+
+if (isset($_SESSION["id"]))
+{
+?>
 	<nav class="topnav">
-  		<a href="./index.php" class="logo"><img src="img/logo.png" alt="logo" />   OnlineLibrary</a>
+  		<a href="index.php" class="logo"><img src="img/logo.png" alt="logo" />   OnlineLibrary</a>
   		<div class="search">
 			<form>
   				<input type="text" placeholder="">
   				<button type="submit"></button>
 			</form>
 		</div>
-  		<a href="./login.php" class="buttonnav">Log in</a>
+  		<a href="profile.php" class="buttonnav">Profile</a>
 	</nav>
+
+<?php
+}
+else
+{
+?>
+
+	<nav class="topnav">
+  		<a href="index.php" class="logo"><img src="img/logo.png" alt="logo" />   OnlineLibrary</a>
+  		<div class="search">
+			<form>
+  				<input type="text" placeholder="">
+  				<button type="submit"></button>
+			</form>
+		</div>
+  		<a href="login.php" class="buttonnav">Log in</a>
+	</nav>
+
+<?php   
+}
+?>
 
 	<div class="genres">
 		<h1>Genres</h1>
@@ -30,7 +57,7 @@
 	<div class="content">
 		<div class="book">
 			<img src="">
-			<a href="./books.php">
+			<a href="books.php">
 			<div class="title">
 				<h2>test</h2>
 			</div>
