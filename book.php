@@ -50,6 +50,30 @@ else
 }
 ?>
 
+<?php
+if (!isset($_SESSION['lang']))
+{
+	$_SESSION['lang'] = "en";
+}
+else if (isset($_GET['lang']) && $_SESSION['lang'] != $_GET['lang'] && !empty($_GET['lang']))
+{
+	if ($_GET['lang'] == "ee")
+	{
+		$_SESSION['lang'] = "ee";
+	}
+	else if ($_GET['lang'] == "en") 
+	{
+		$_SESSION['lang'] = "en";
+	}
+	else if ($_GET['lang'] == "ru") 
+	{
+		$_SESSION['lang'] = "ru";
+	}
+
+}
+require "lang/" . $_SESSION['lang'] . ".php";
+?>
+
 	<div class="left-block">
 		<div class="bookcover">
 			<img alt="" src="">
@@ -67,13 +91,25 @@ else
 		<br>
 		<button name="submit" type="submit">Want to read</button>
 		<a href="read.php" class="button" style="color: white; background-color: #728091;">Read</a>
+
+		<div class="lang">
+			<p style="color: #728091;">
+				<a style="color: #728091;" href="book.php?lang=en">EN</a> /
+				<a style="color: #728091;" href="book.php?lang=ru">RU</a> /
+				<a style="color: #728091;" href="book.php?lang=ee">EE</a>
+			</p>
+		</div>
 	</div>
 
 	<div class="right-block">
-		<h1>Publisher description</h1>
-		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, pariatur doloremque, ad rerum recusandae labore ut! Odio, architecto, expedita enim quam ullam ut facere aut rerum, doloribus magnam quisquam cum. Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Recusandae sit ducimus sequi explicabo rerum praesentium qui numquam consequatur sed voluptas, dicta magnam velit laboriosam facere molestiae possimus vel iure, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora veniam officia eaque deserunt asperiores vel sint accusamus sequi pariatur unde aliquid quaerat nemo aliquam, velit. Atque nulla molestiae quaerat eum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores eius nihil facilis quo. Neque mollitia, id expedita voluptate? Tenetur, nostrum ipsam facere a provident quia assumenda culpa. Consectetur explicabo, officia. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus porro, dolorem culpa exercitationem maxime delectus, harum magnam. Suscipit quidem voluptatum consectetur odio voluptatem. Distinctio libero, earum repudiandae, dolorum cum ipsa.</p>
-		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, pariatur doloremque, ad rerum recusandae labore ut! Odio, architecto, expedita enim quam ullam ut facere aut rerum, doloribus magnam quisquam cum. Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Recusandae sit ducimus sequi explicabo rerum praesentium qui numquam consequatur sed voluptas, dicta magnam velit laboriosam facere molestiae possimus vel iure, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora veniam officia eaque deserunt asperiores vel sint accusamus sequi pariatur unde aliquid quaerat nemo aliquam, velit. Atque nulla molestiae quaerat eum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores eius nihil facilis quo. Neque mollitia, id expedita voluptate? Tenetur, nostrum ipsam facere a provident quia assumenda culpa. Consectetur explicabo, officia. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus porro, dolorem culpa exercitationem maxime delectus, harum magnam. Suscipit quidem voluptatum consectetur odio voluptatem. Distinctio libero, earum repudiandae, dolorum cum ipsa.</p>
+		<div class="textdescription">
+			<h1><?php echo $language['pd'];?></h1>
+			<p><?php echo $language['description_id01'];?></p>
+		</div>
 	</div>
 
+	<footer>
+
+  	</footer>
 </body>
 </html>

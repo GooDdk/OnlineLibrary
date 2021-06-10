@@ -49,7 +49,6 @@ else
 <?php   
 }
 ?>
-
 	<form method="POST">
 		<div class="left-block">
 			<h1>Rating</h1>
@@ -64,15 +63,6 @@ else
 				<label for="star-2" title="Оценка «2»"></label>    
 				<input type="radio" id="star-1" name="rating" value="1">
 				<label for="star-1" title="Оценка «1»"></label>
-			</div>
-			<h1>Language</h1>
-			<div class="select select--multiple">
-  				<select id="multi-select" multiple>
-    				<option value="Option 1">Estonian</option>
-    				<option value="Option 2">Russian</option>
-    				<option value="Option 3">English</option>
-  				</select>
-  				<span class="focus"></span>
 			</div>
 			<button name="submit" type="submit">Apply</button>
 		</div>
@@ -101,5 +91,8 @@ else
 		</div>
 	</div>
 
+	<footer>
+
+  	</footer>
 </body>
 </html>

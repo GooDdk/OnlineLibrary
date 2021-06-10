@@ -21,7 +21,7 @@ if (isset($_SESSION["id"]))
 ?>
     <nav class="topnav">
         <a href="index.php" class="logo"><img src="img/logo.png" alt="logo" />   OnlineLibrary</a>
-        <a href="logout.php" class="buttonnav">Logout</a>
+        <a href="includes/logout.inc.php" class="buttonnav">Logout</a>
     </nav>
 
 <?php
@@ -81,6 +81,11 @@ else
         </div>
       </div>
     </div>
+
+        <footer>
+
+        </footer>
+        
         <script src="js/script.js"></script>
     </body>
     </html>
