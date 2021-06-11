@@ -19,7 +19,7 @@ if (isset($_SESSION["id"]))
 {
 ?>
 	<nav class="topnav">
-  		<a href="index.php" class="logo"><img src="img/logo.png" alt="logo" />   OnlineLibrary</a>
+  		<a href="index.php" class="logo"><img src="icon/logo.png" alt="logo" />   OnlineLibrary</a>
   		<div class="search">
 			<form>
   				<input type="text" placeholder="">

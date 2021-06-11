@@ -20,7 +20,7 @@ if (isset($_SESSION["id"]))
 {
 ?>
     <nav class="topnav">
-        <a href="index.php" class="logo"><img src="img/logo.png" alt="logo" />   OnlineLibrary</a>
+        <a href="index.php" class="logo"><img src="icon/logo.png" alt="logo" />   OnlineLibrary</a>
         <a href="includes/logout.inc.php" class="buttonnav">Logout</a>
     </nav>
 
@@ -40,7 +40,7 @@ else
     
     <div class="left-block">
         <h1>Profile</h1>
-        <a href="#openModal"><img class="avatar" src="/webpage <?php echo $_SESSION["profileimage"]; ?>" alt="avatar" width="150" height="150"></a>
+        <a href="#openModal"><img class="avatar" src="<?php echo $_SESSION["profileimage"]; ?>" alt="avatar" width="150" height="150"></a>
         <h2 style="color: #728091;"><?php echo $_SESSION["username"]; ?></h2>
     </div>
 

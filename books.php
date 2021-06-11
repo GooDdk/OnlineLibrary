@@ -12,14 +12,15 @@
 </head>
 <body>
 
-	<?php
+<?php
 session_start();
+include("includes/db.inc.php");
 
 if (isset($_SESSION["id"]))
 {
 ?>
 	<nav class="topnav">
-  		<a href="index.php" class="logo"><img src="img/logo.png" alt="logo" />   OnlineLibrary</a>
+  		<a href="index.php" class="logo"><img src="icon/logo.png" alt="logo" />   OnlineLibrary</a>
   		<div class="search">
 			<form>
   				<input type="text" placeholder="">
@@ -69,28 +70,25 @@ else
 	</form>
 
 	<div class="right-block">
-		<a href="book.php">
-			<div class="book">
-			<img alt="" src="">
-		</div>
-		</a>
-		<div class="book">
-			<img alt="" src="">
-		</div>
-		<div class="book">
-			<img alt="" src="">
-		</div>
-		<div class="book">
-			<img alt="" src="">
-		</div>
-		<div class="book">
-			<img alt="" src="">
-		</div>
-		<div class="book">
-			<img alt="" src="">
-		</div>
-	</div>
+		<?php
+			$sql2 = 'SELECT * FROM books;';
+			$result2 = mysqli_query($connection, $sql2);
+			//$rows = mysqli_fetch_all($result2, MYSQLI_ASSOC);
+if(mysqli_num_rows($result2) > 0){
 
+
+    		while ($row = mysqli_fetch_assoc($result2))
+    		{
+        		echo '<a href="book.php">';
+        		echo '<div class="book">';
+        		echo '<img src="'.$row["picture"].'" alt="picture" width="170" height="250">';
+        		echo '</div>';
+        		echo '<h2 style="color: #728091;">'.$row["title"].'</h2>';
+        		echo '</a>';
+    		}
+    	}
+		?>
+	</div>
 	<footer>
 
   	</footer>
